@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
+#from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, Integer, String
 
@@ -12,7 +13,7 @@ engine = create_engine('sqlite:///demobase2.db')
 Base = declarative_base()
 
 class Saludo(Base):
-    __tablename__ = 'saludo'
+    __tablename__ = 'saludo1'
     #  __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
     mensaje = Column(String)
